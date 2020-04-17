@@ -1,0 +1,27 @@
+diff --git a/Makefile b/Makefile
+index e0e8b8f0..03613fca 100644
+--- a/Makefile
++++ b/Makefile
+@@ -54,7 +54,7 @@ ARCHFLAGS := $(ARCHFLAGS)
+ 
+ OPTFLAGS  ?= -g -O
+ 
+-CFLAGS    += -Wall -Wno-unused-function -Wno-write-strings -Wno-sign-compare $(ARCHFLAGS)
++CFLAGS    += -DWIN32_NO_DLL -DHAVE_STRUCT_TIMESPEC -Wall -Wno-unused-function -Wno-write-strings -Wno-sign-compare $(ARCHFLAGS)
+ ifneq ($(findstring arm,$(shell uname -m)),)
+ 	CFLAGS += -DABC_MEMALIGN=4
+ endif
+@@ -136,11 +136,11 @@ endif
+ # LIBS := -ldl -lrt
+ LIBS += -lm
+ ifneq ($(OS), FreeBSD)
+-  LIBS += -ldl
++#  LIBS += -ldl
+ endif
+ 
+ ifneq ($(findstring Darwin, $(shell uname)), Darwin)
+-   LIBS += -lrt
++#   LIBS += -lrt
+ endif
+ 
+ ifdef ABC_USE_LIBSTDCXX
