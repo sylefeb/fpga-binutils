@@ -24,7 +24,7 @@ strip -S yosys-filterlib.exe
 cp yosys.exe ../../bin/
 cp yosys-abc.exe ../../bin/
 cp yosys-filterlib.exe ../../bin/
-cp -R share ../../bin/
+cp -R share ../../bin/share
 cd ..
 
 cd ..
