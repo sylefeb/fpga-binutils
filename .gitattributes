@@ -1,0 +1,6 @@
+*.ice text eol=lf
+*.v text eol=lf
+*.sh text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+*.diff text eol=lf
