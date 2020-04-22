@@ -29,4 +29,3 @@ cp ./bin/silice.exe ../../bin/
 # cd ..
 
 cd ..
-

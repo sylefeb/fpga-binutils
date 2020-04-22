@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir bin
+
 ./compile_icestorm.sh
 ./compile_yosys.sh
 ./compile_nextpnr.sh
