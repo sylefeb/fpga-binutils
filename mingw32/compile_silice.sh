@@ -28,4 +28,6 @@ cmake -DCMAKE_BUILD_TYPE=Release -G "MSYS Makefiles" ../tools/silice_hardware_em
 make install
 cd ..
 
+cp ./bin/silicehe.exe ../../bin/
+
 cd ..
