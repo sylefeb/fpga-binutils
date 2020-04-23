@@ -18,6 +18,7 @@ make
 
 strip -S bin/verilator_bin.exe
 cp bin/verilator_bin.exe ../../bin/verilator.exe
+cp bin/verilator_includer ../../bin/
 mkdir ../../include/
 mkdir ../../include/gtkwave
 mkdir ../../include/vlstd
