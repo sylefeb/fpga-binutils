@@ -15,9 +15,11 @@ cd gtkwave3-gtk3
 ./autogen.sh
 ./configure	--with-tcl=${MINGW_PREFIX}/lib/	 --with-tk=${MINGW_PREFIX}/lib/  --host=${MINGW_CHOST}  --target=${MINGW_CHOST}  --build=${MINGW_CHOST}  --prefix=${MINGW_PREFIX}
 make -j16
+mkdir ../../../../lib
 cp -R /mingw32/lib/tcl8.6 ../../../../lib/
 strip -S ./src/gtkwave.exe
 cp ./src/gtkwave.exe ../../../../bin/
+cp ./src/helpers/fst/libfst.a ../../../../lib/
 cd ..
 cd ..
 cd ..
