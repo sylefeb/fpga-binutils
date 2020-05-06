@@ -9,7 +9,7 @@ cd BUILDS
 
 git clone https://github.com/cliffordwolf/icestorm.git
 cd icestorm
-make -j16
+mingw32-make -j16
 strip -S ./icepack/icepack.exe
 strip -S ./iceprog/iceprog.exe
 strip -S ./icepll/icepll.exe

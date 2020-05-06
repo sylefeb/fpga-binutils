@@ -12,7 +12,7 @@ cd nextpnr
 mkdir build
 cd build
 cmake .. -G"MSYS Makefiles" -DARCH=ice40 -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw32
-make
+mingw32-make
 strip -S nextpnr-ice40.exe
 strip -S bbasm.exe
 cp nextpnr-ice40.exe ../../../bin/

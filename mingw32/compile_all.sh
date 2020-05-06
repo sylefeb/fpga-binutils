@@ -2,6 +2,8 @@
 
 mkdir bin
 
+pacman -S --noconfirm --needed git gcc g++ make cmake automake
+
 ./compile_icestorm.sh
 ./compile_yosys.sh
 ./compile_nextpnr.sh

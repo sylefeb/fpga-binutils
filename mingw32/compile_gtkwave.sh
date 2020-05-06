@@ -12,9 +12,10 @@ cd gtkwave
 svn checkout svn://svn.code.sf.net/p/gtkwave/code/
 cd code
 cd gtkwave3-gtk3
+export MAKE=mingw32-make
 ./autogen.sh
 ./configure	--with-tcl=${MINGW_PREFIX}/lib/	 --with-tk=${MINGW_PREFIX}/lib/  --host=${MINGW_CHOST}  --target=${MINGW_CHOST}  --build=${MINGW_CHOST}  --prefix=${MINGW_PREFIX}
-make -j16
+mingw32-make -j16
 mkdir ../../../../lib
 cp -R /mingw32/lib/tcl8.6 ../../../../lib/
 strip -S ./src/gtkwave.exe

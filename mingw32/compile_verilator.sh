@@ -14,7 +14,7 @@ cp /usr/include/FlexLexer.h src/
 unset VERILATOR_ROOT
 autoconf        # Create ./configure script
 ./configure
-make
+mingw32-make
 
 strip -S bin/verilator_bin.exe
 cp bin/verilator_bin.exe ../../bin/verilator.exe

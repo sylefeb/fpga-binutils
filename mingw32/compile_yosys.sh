@@ -16,8 +16,8 @@ cd abc
 git checkout ed90ce2
 git apply ../../../abc_patch.diff
 cd ..
-make config-gcc
-make -j16
+mingw32-make config-gcc
+mingw32-make -j16
 strip -S yosys.exe
 strip -S yosys-abc.exe
 strip -S yosys-filterlib.exe

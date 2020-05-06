@@ -17,7 +17,7 @@ cd Silice
 mkdir build-silice
 cd build-silice
 cmake -DCMAKE_BUILD_TYPE=Release -G "MSYS Makefiles" ..
-make -j16 install
+mingw32-make -j16 install
 cd ..
 
 cp ./bin/silice.exe ../../bin/
@@ -25,7 +25,7 @@ cp ./bin/silice.exe ../../bin/
 mkdir build-silicehe
 cd build-silicehe
 cmake -DCMAKE_BUILD_TYPE=Release -G "MSYS Makefiles" ../tools/silice_hardware_emulator
-make install
+mingw32-make install
 cd ..
 
 cp ./bin/silicehe.exe ../../bin/

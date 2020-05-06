@@ -12,7 +12,7 @@ cd iverilog
 git apply ../../iverilog_patch.diff
 ./autoconf.sh
 ./configure --prefix=/mingw32
-make -j16
+mingw32-make -j16
 strip -S ./driver/iverilog.exe
 strip -S ./driver-vpi/iverilog-vpi.exe
 strip -S ivl.exe
