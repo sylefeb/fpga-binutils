@@ -1,8 +1,10 @@
 # fpga-binutils
 Compilation framework for Open Source FPGA tools under Windows / MinGW32.
 
+**Content:** yosys, nextpnr-ice40, icestorm, riscv-toolchain, icarus verilog, verilator, gtkwave
+
 ## Pre-compiled binaries
-A release package (zip) should be available. I recommend using it as recompiling everything takes a long time (~ 2 hours).
+A release package (zip) should be available. I recommend using it as recompiling everything takes a long time (~ 2.5 hours).
 
 ## How to build
 - Install MSYS2 from https://www.msys2.org/ (make sure to follow the instructions on the page to update to latest)
