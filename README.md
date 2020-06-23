@@ -9,7 +9,7 @@ A release package (zip) should be available. I recommend using it as recompiling
 ## How to build
 - Install MSYS2 from https://www.msys2.org/ (make sure to follow the instructions on the page to update to latest)
 
-*Note:* MSYS2 install three different environments (in a single, self contained directory): MSYS, MinGW32 and MinGW64. These scripts are meant for MinGW32 only.
+*Note:* MSYS2 installs three different environments (in a single, self contained directory): MSYS, MinGW32 and MinGW64. These scripts are meant for MinGW**32** only.
 
 - Launch a MinGW32 shell (Start => type 'MinGW', you should see the shell proposed).
 - Clone this repo.
