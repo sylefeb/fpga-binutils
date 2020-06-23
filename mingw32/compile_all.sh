@@ -7,11 +7,12 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake
 ./compile_icestorm.sh
 ./compile_yosys.sh
 ./compile_nextpnr.sh
-./compile_silice.sh
 
 ./compile_iverilog.sh
 ./compile_verilator.sh
 ./compile_gtkwave.sh
+
+./compile_riscv.sh
 
 cp /mingw32/bin/libatk-1.0-0.dll ./bin/
 cp /mingw32/bin/libboost_filesystem-mt.dll ./bin/

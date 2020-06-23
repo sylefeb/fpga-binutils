@@ -12,7 +12,7 @@ cd nextpnr
 rm -rf build
 mkdir build
 cd build
-cmake .. -G "MinGW Makefiles" -DARCH=ice40 -DBUILD_PYTHON=ON -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw32
+cmake .. -G "MinGW Makefiles" -DARCH=ice40 -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw32
 mingw32-make
 strip -S nextpnr-ice40.exe
 strip -S bbasm.exe

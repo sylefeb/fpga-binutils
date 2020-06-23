@@ -7,14 +7,14 @@ pacman -S --noconfirm --needed git ${MINGW_PACKAGE_PREFIX}-gcc-libs gawk ${MINGW
 mkdir BUILDS
 cd BUILDS
 
-git clone https://github.com/riscv/riscv-gnu-toolchain
+git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 cd riscv-gnu-toolchain
 
 ./configure --prefix=/opt/riscv --with-arch=rv32i
 
 make -j 2
 find /opt/riscv -executable -type f -exec strip {}\;
-cp -R /opt/riscv ../../bin/
+cp -R /opt/riscv/* ../../
 
 cd ..
 cd ..
