@@ -18,8 +18,10 @@ A release package (zip) should be available. I recommend using it as recompiling
 - Wait... 
 - ... wait more ...
 - ... wait a lot more ...
-- done! Everything is in subdirectories specially created there. 
+- done! Everything is in subdirectories specially created under the mingw32 directory. 
 - Type package.sh to obtain a nice zip, ready to be uploaded as a release.
+
+**Important:** Beware that the scripts will automatically install required packages (with pacman) without prompting. The riscv toolchain will be built in /opt/risc.
 
 *Note:* global environment variables such as your PATH or Boost_DIR can interfere with the build. If you get errors, this is the first thing to check. 
 
