@@ -69,4 +69,6 @@ cp /mingw32/bin/Qt5Widgets.dll ./bin/
 cp /mingw32/bin/tcl86.dll ./bin/
 cp /mingw32/bin/tk86.dll ./bin/
 cp /mingw32/bin/zlib1.dll ./bin/
+cp /mingw32/bin/libdl.dll ./bin/
+
 cp -R /mingw32/lib/gdk-pixbuf-2.0 ./lib/
