@@ -12,6 +12,8 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake
 ./compile_verilator.sh
 ./compile_gtkwave.sh
 
+./compile_silice.sh
+
 ./compile_riscv.sh
 
 cp /mingw32/bin/libatk-1.0-0.dll ./bin/

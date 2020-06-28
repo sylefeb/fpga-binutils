@@ -13,7 +13,7 @@ cd riscv-gnu-toolchain
 ./configure --prefix=/opt/riscv --with-arch=rv32i
 
 make -j 4
-find /opt/riscv -executable -type f -exec strip {}\;
+find /opt/riscv -executable -type f -exec strip {} +
 cp -R /opt/riscv/* ../../
 
 cd ..
