@@ -29,3 +29,6 @@ A release package (zip) should be available. I recommend using it as recompiling
 
 ### USB and IceStick under Windows
 To program an IceStick with *iceprog* under Windows, you may have to use the [Zadig USB tool](https://zadig.akeo.ie/) to swap the driver. To do this, connect the IceStick, launch Zadig, select the IceStick from the drop-down menu (interface 0), and change the driver for 'libusbK' (select it on the right side). Click replace, wait, disconnect the board, put it back, should be working now. I've done this several times without issues. If it still does not work, verify the USB port is not a hub (some USB ports on computer fronts are) and try again from a native USB port on your motherboard.
+
+## See also
+- MSYS2/MinGW package scripts for FPGA tools - https://github.com/DiodeRed/MinGW-FPGA-Packages
