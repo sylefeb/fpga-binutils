@@ -9,6 +9,8 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake
 ./compile_trellis.sh
 ./compile_nextpnr.sh
 
+./compile_fujprog.sh
+
 ./compile_iverilog.sh
 ./compile_verilator.sh
 ./compile_gtkwave.sh
