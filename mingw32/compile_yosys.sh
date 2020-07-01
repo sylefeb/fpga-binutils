@@ -12,11 +12,11 @@ cd BUILDS
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
 git checkout 4c52691a58a469a525401bbc83c65f262b2a5504
-git apply ../../yosys_patch.diff
+git apply ../../../patches/yosys_patch.diff
 git clone https://github.com/berkeley-abc/abc
 cd abc
 git checkout ed90ce2
-git apply ../../../abc_patch.diff
+git apply ../../../../patches/abc_patch.diff
 cd ..
 mingw32-make PREFIX=$DIR config-gcc
 mingw32-make PREFIX=$DIR -j16

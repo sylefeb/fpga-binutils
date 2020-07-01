@@ -9,7 +9,7 @@ cd BUILDS
 
 git clone https://github.com/steveicarus/iverilog
 cd iverilog
-git apply ../../iverilog_patch.diff
+git apply ../../../patches/iverilog_patch.diff
 ./autoconf.sh
 ./configure --prefix=/mingw32
 mingw32-make -j16
