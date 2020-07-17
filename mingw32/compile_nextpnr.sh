@@ -22,13 +22,8 @@ cd nextpnr
 rm -rf build
 mkdir build
 cd build
-cmake .. -G "MinGW Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=$DIR/BUILDS/icebox-data/ -DTRELLIS_INSTALL_PREFIX=$DIR -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw32
-mingw32-make
-strip -S nextpnr-ice40.exe
-strip -S nextpnr-ecp5.exe
-strip -S bba/bbasm.exe
-cp nextpnr-*.exe ../../../bin/
-cp bba/bbasm.exe ../../../bin/
+cmake .. -G "MinGW Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=$DIR/BUILDS/icebox-data/ -DTRELLIS_INSTALL_PREFIX=$DIR -DBUILD_PYTHON=ON -DBUILD_GUI=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR
+mingw32-make install
 cd ..
 cd ..
 

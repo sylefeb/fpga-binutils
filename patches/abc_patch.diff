@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index e0e8b8f0..03613fca 100644
+index 583bc25b..875775ba 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -54,7 +54,7 @@ ARCHFLAGS := $(ARCHFLAGS)
+@@ -56,7 +56,7 @@ ARCHFLAGS := $(ARCHFLAGS)
  
  OPTFLAGS  ?= -g -O
  
@@ -11,12 +11,7 @@ index e0e8b8f0..03613fca 100644
  ifneq ($(findstring arm,$(shell uname -m)),)
  	CFLAGS += -DABC_MEMALIGN=4
  endif
-@@ -136,11 +136,11 @@ endif
- # LIBS := -ldl -lrt
- LIBS += -lm
- ifneq ($(OS), FreeBSD)
--  LIBS += -ldl
-+#  LIBS += -ldl
+@@ -142,7 +142,7 @@ ifneq ($(OS), FreeBSD)
  endif
  
  ifneq ($(findstring Darwin, $(shell uname)), Darwin)
@@ -25,3 +20,17 @@ index e0e8b8f0..03613fca 100644
  endif
  
  ifdef ABC_USE_LIBSTDCXX
+@@ -206,7 +206,12 @@ depend: $(DEP)
+ 
+ clean:
+ 	@echo "$(MSG_PREFIX)\`\` Cleaning up..."
+-	$(VERBOSE)rm -rvf $(PROG) lib$(PROG).a $(OBJ) $(GARBAGE) $(OBJ:.o=.d)
++	$(VERBOSE)rm -rvf $(OBJ:.o=.d)
++	$(VERBOSE)rm -rvf $(PROG)
++	$(VERBOSE)rm -rvf lib$(PROG).a
++	$(VERBOSE)rm -rvf $(OBJ)
++	$(VERBOSE)rm -rvf $(GARBAGE)
++
+ 
+ tags:
+ 	etags `find . -type f -regex '.*\.\(c\|h\)'`
