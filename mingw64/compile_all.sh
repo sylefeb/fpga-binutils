@@ -75,5 +75,8 @@ cp /mingw64/bin/tcl86.dll ./bin/
 cp /mingw64/bin/tk86.dll ./bin/
 cp /mingw64/bin/zlib1.dll ./bin/
 cp /mingw64/bin/libdl.dll ./bin/
+cp /mingw32/bin/libbrotlidec.dll ./bin/
+cp /mingw32/bin/libbrotlicommon.dll ./bin/
+cp /mingw32/bin/libgcc_s_seh-*.dll ./bin/
 
 cp -R /mingw64/lib/gdk-pixbuf-2.0 ./lib/
