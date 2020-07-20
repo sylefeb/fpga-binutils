@@ -25,7 +25,7 @@ mkdir ../../lib/
 mkdir ../../lib/ivl/
 cp ./ivlpp/ivlpp.exe ../../lib/ivl/
 cp ivl.exe ../../lib/ivl/
-cp `cat ../../iverilog_file_list.txt` ../../lib/ivl/
+cp `cat ../../../iverilog_file_list.txt` ../../lib/ivl/
 
 cd ..
 
