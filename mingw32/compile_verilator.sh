@@ -23,7 +23,7 @@ mkdir ../../include/
 mkdir ../../include/gtkwave
 mkdir ../../include/vlstd
 cd include
-cp --parents `cat ../../../verilator_file_list.txt` ../../../include/
+cp --parents `cat ../../../../verilator_file_list.txt` ../../../include/
 cd ..
 
 cd ..
