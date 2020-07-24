@@ -4,12 +4,12 @@ mkdir bin
 
 pacman -S --noconfirm --needed git gcc g++ make cmake automake
 
+./compile_fujprog.sh
+
 ./compile_yosys.sh
 ./compile_icestorm.sh
 ./compile_trellis.sh
 ./compile_nextpnr.sh
-
-./compile_fujprog.sh
 
 ./compile_iverilog.sh
 ./compile_verilator.sh

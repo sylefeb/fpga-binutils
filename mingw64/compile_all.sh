@@ -4,12 +4,12 @@ mkdir bin
 
 pacman -S --noconfirm --needed git gcc g++ make cmake automake
 
+# ../mingw32/compile_fujprog.sh # fujprog only compiles as 32 bits ...
+
 ../mingw32/compile_yosys.sh
 ../mingw32/compile_icestorm.sh
 ../mingw32/compile_trellis.sh
 ../mingw32/compile_nextpnr.sh
-
-../mingw32/compile_fujprog.sh
 
 ../mingw32/compile_iverilog.sh
 ../mingw32/compile_verilator.sh
