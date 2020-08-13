@@ -11,7 +11,7 @@ cd BUILDS
 
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
-git checkout 97daf612cbeb24698c542d0e9574bab99dd616b7
+git checkout 3b534a203ae733c194415838259709dcf706c7bf
 git apply ../../../patches/yosys_patch.diff
 git clone https://github.com/berkeley-abc/abc
 cd abc
