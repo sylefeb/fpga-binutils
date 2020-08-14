@@ -19,6 +19,11 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake
 
 ./compile_riscv.sh
 
+for file in ./bin/*.exe
+do
+  strip "$file"
+done
+
 cp /mingw32/bin/libatk-*.dll ./bin/
 cp /mingw32/bin/libboost_filesystem-mt.dll ./bin/
 cp /mingw32/bin/libboost_program_options-mt.dll ./bin/
