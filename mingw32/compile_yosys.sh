@@ -11,16 +11,15 @@ cd BUILDS
 
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
-git checkout 3b534a203ae733c194415838259709dcf706c7bf
+git checkout c75d8c7439f84111f537c21c01eaae9df5e935f0
 git apply ../../../patches/yosys_patch.diff
 git clone https://github.com/berkeley-abc/abc
 cd abc
-git checkout ba063a1b557a548cbedd963f6bcdf176df14ee8e
+git checkout 341db25
 git apply ../../../../patches/abc_patch.diff
 cd ..
 mingw32-make PREFIX=$DIR config-gcc
 mingw32-make PREFIX=$DIR -j32
-# mingw32-make -k PREFIX=$DIR install
 strip -S yosys.exe
 strip -S yosys-abc.exe
 strip -S yosys-filterlib.exe
