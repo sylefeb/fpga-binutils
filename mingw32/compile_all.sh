@@ -5,6 +5,7 @@ mkdir bin
 pacman -S --noconfirm --needed git gcc g++ make cmake automake
 
 ./compile_fujprog.sh
+./compile_dfu-util.sh
 
 ./compile_yosys.sh
 ./compile_icestorm.sh
