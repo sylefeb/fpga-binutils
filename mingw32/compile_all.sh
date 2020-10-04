@@ -5,7 +5,11 @@ mkdir bin
 pacman -S --noconfirm --needed git gcc g++ make cmake automake
 
 ./compile_fujprog.sh
-./compile_dfu-util.sh
+
+exit
+
+### we skip the rest; in this new version we only build 64 bits and 
+### as 32 bits those tools that cannot compile under 64 bits MinGW
 
 ./compile_yosys.sh
 ./compile_icestorm.sh
