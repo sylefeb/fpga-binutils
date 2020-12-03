@@ -20,7 +20,7 @@ exit
 ./compile_verilator.sh
 ./compile_gtkwave.sh
 
-./compile_silice.sh
+# ./compile_silice.sh
 
 ./compile_riscv.sh
 

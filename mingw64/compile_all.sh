@@ -4,7 +4,7 @@ mkdir bin
 
 pacman -S --noconfirm --needed git gcc g++ make cmake automake
 
-# ../mingw32/compile_fujprog.sh # fujprog only compiles as 32 bits ...
+../mingw32/compile_fujprog.sh # fujprog only compiles as 32 bits ...
 
 ../mingw32/compile_dfu-util.sh
 
@@ -17,7 +17,7 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake
 ../mingw32/compile_verilator.sh
 ../mingw32/compile_gtkwave.sh
 
-../mingw32/compile_silice.sh
+# ../mingw32/compile_silice.sh
 
 ../mingw32/compile_riscv.sh
 

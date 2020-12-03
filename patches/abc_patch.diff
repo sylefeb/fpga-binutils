@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 583bc25b..875775ba 100644
+index ee4172f5..d1b64b3e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -56,7 +56,7 @@ ARCHFLAGS := $(ARCHFLAGS)
@@ -20,17 +20,3 @@ index 583bc25b..875775ba 100644
  endif
  
  ifdef ABC_USE_LIBSTDCXX
-@@ -206,7 +206,12 @@ depend: $(DEP)
- 
- clean:
- 	@echo "$(MSG_PREFIX)\`\` Cleaning up..."
--	$(VERBOSE)rm -rvf $(PROG) lib$(PROG).a $(OBJ) $(GARBAGE) $(OBJ:.o=.d)
-+	$(VERBOSE)rm -rvf $(OBJ:.o=.d)
-+	$(VERBOSE)rm -rvf $(PROG)
-+	$(VERBOSE)rm -rvf lib$(PROG).a
-+	$(VERBOSE)rm -rvf $(OBJ)
-+	$(VERBOSE)rm -rvf $(GARBAGE)
-+
- 
- tags:
- 	etags `find . -type f -regex '.*\.\(c\|h\)'`
