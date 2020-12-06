@@ -11,7 +11,7 @@ git clone --recursive https://github.com/kost/fujprog
 cd fujprog
 
 cmake . -G "MinGW Makefiles"
-mingw32-make -j16
+mingw32-make -j8
 
 strip -S fujprog.exe
 cp fujprog.exe ../../bin/
