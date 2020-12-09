@@ -10,18 +10,15 @@ cd BUILDS
 git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 cd riscv-gnu-toolchain
 
-export LDFLAGS=-lbcrypt
-export LDLIBS=-lbcrypt
-
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
 echo "Building for MinGW32"
-./configure --prefix=/opt/riscv/ --with-host=i686-w64-mingw32 --with-arch=rv32i
+./configure --prefix=/opt/riscv/ --with-host=i686-w64-mingw32 --with-arch=rv32i --without-system-zlib
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
 echo "Building for MinGW64"
-./configure --prefix=/opt/riscv/ --with-host=x86_64-w64-mingw32 --with-arch=rv32i
+./configure --prefix=/opt/riscv/ --with-host=x86_64-w64-mingw32 --with-arch=rv32i --without-system-zlib
 fi
 
-make -j 16
+make -i -j 16
 find /opt/riscv/ -executable -type f -exec strip {} +
 cp -R /opt/riscv/* ../../
 
