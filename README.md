@@ -1,7 +1,15 @@
 # fpga-binutils
-Compilation framework for Open Source FPGA tools under Windows / MinGW32.
+Compilation framework for Open Source FPGA tools under Windows / MinGW64.
 
-**Content:** yosys, nextpnr-ice40, icestorm, riscv-toolchain, icarus verilog, verilator, gtkwave
+This package is prepared to help you get started with the [Silice](https://github.com/sylefeb/Silice) programming language
+under Windows. It provides all essential FPGA tools plus the RISC-V toolchain, as well as board programming tools, pre-compiled for MinGW64.
+It is tested and known to work for all [Silice](https://github.com/sylefeb/Silice) demo projects.
+
+There are other great packages for Windows and multi-platform, please check alternatives in the notes below.
+
+**Content:** yosys, nextpnr-ice40, icestorm, riscv-toolchain, icarus verilog, verilator, gtkwave, fujprog, dfu-tool
+
+**Important:** see note below about how to setup board USB drivers under Windows
 
 ## Pre-compiled binaries
 A release package (zip) should be available. I recommend using it as recompiling everything takes a long time (~ 2.5 hours).
@@ -35,3 +43,5 @@ To program the ECP5 with *fujprog* make sure to install the [FTDI CDM drivers](h
 
 ## See also
 - MSYS2/MinGW package scripts for FPGA tools - https://github.com/DiodeRed/MinGW-FPGA-Packages
+- Multi-platform nightly builds of many FPGA tools https://github.com/open-tool-forge/fpga-toolchain
+
