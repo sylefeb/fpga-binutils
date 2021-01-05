@@ -7,6 +7,7 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake
 # ../mingw32/compile_fujprog.sh # fujprog only compiles as 32 bits ...
 
 ../mingw32/compile_dfu-util.sh
+../mingw32/compile_openFPGALoader.sh
 
 ../mingw32/compile_yosys.sh
 ../mingw32/compile_icestorm.sh
