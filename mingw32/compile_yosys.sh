@@ -13,6 +13,7 @@ git clone https://github.com/YosysHQ/yosys.git
 cd yosys
 git checkout d882b6fe3ca3c52b9a72a8282cda92288d198506
 git apply ../../../patches/yosys_patch.diff
+git apply ../../../patches/yosys_patch_ice40_dsp.diff
 git clone https://github.com/YosysHQ/abc
 cd abc
 git checkout 4f5f73d18b137930fb3048c0b385c82fa078db38
