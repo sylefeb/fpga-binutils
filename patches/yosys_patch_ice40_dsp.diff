@@ -1,5 +1,5 @@
 diff --git a/passes/pmgen/ice40_dsp.pmg b/passes/pmgen/ice40_dsp.pmg
-index 7a01cbd5..59aa8f76 100644
+index 7a01cbd5..ee2829a0 100644
 --- a/passes/pmgen/ice40_dsp.pmg
 +++ b/passes/pmgen/ice40_dsp.pmg
 @@ -23,7 +23,7 @@ match mul
@@ -15,7 +15,7 @@ index 7a01cbd5..59aa8f76 100644
  		// Do not remove non-const sign bit
  		if (sig[i].wire)
  			++i;
-+    // Do not remove const sign bit if signed and bit is 0
++    // Do not remove const sign bit if signed
 +    else if (is_signed)
 +      ++i;
  		return sig.extract(0, i);
