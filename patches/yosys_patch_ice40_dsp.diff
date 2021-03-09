@@ -1,29 +1,43 @@
+diff --git a/passes/pmgen/ice40_dsp.cc b/passes/pmgen/ice40_dsp.cc
+index c46f5d58..6c82c73b 100644
+--- a/passes/pmgen/ice40_dsp.cc
++++ b/passes/pmgen/ice40_dsp.cc
+@@ -73,11 +73,11 @@ void create_ice40_dsp(ice40_dsp_pm &pm)
+ 
+ 	// SB_MAC16 Input Interface
+ 	SigSpec A = st.sigA;
+-	A.extend_u0(16, st.mul->getParam(ID::A_SIGNED).as_bool());
++	A.extend_u0(16, /*st.mul->getParam(ID::A_SIGNED).as_bool()*/true);
+ 	log_assert(GetSize(A) == 16);
+ 
+ 	SigSpec B = st.sigB;
+-	B.extend_u0(16, st.mul->getParam(ID::B_SIGNED).as_bool());
++	B.extend_u0(16, /*st.mul->getParam(ID::B_SIGNED).as_bool()*/true);
+ 	log_assert(GetSize(B) == 16);
+ 
+ 	SigSpec CD = st.sigCD;
 diff --git a/passes/pmgen/ice40_dsp.pmg b/passes/pmgen/ice40_dsp.pmg
-index 7a01cbd5..ee2829a0 100644
+index 7a01cbd5..27323e02 100644
 --- a/passes/pmgen/ice40_dsp.pmg
 +++ b/passes/pmgen/ice40_dsp.pmg
-@@ -23,7 +23,7 @@ match mul
- endmatch
- 
- code sigA sigB sigH
--	auto unextend = [](const SigSpec &sig) {
-+	auto unextend = [](const SigSpec &sig,bool is_signed) {
- 		int i;
+@@ -28,9 +28,8 @@ code sigA sigB sigH
  		for (i = GetSize(sig)-1; i > 0; i--)
  			if (sig[i] != sig[i-1])
-@@ -31,10 +31,13 @@ code sigA sigB sigH
- 		// Do not remove non-const sign bit
- 		if (sig[i].wire)
- 			++i;
-+    // Do not remove const sign bit if signed
-+    else if (is_signed)
-+      ++i;
+ 				break;
+-		// Do not remove non-const sign bit
+-		if (sig[i].wire)
+-			++i;
++    // Preserve sign bit
++		++i;
  		return sig.extract(0, i);
  	};
--	sigA = unextend(port(mul, \A));
--	sigB = unextend(port(mul, \B));
-+	sigA = unextend(port(mul, \A), param(mul, \A_SIGNED).as_bool());
-+	sigB = unextend(port(mul, \B), param(mul, \B_SIGNED).as_bool());
+ 	sigA = unextend(port(mul, \A));
+@@ -304,7 +303,7 @@ reject_ffCD: 		;
+ endcode
  
- 	SigSpec O;
- 	if (mul->type == $mul)
+ code sigCD
+-	sigCD.extend_u0(32, cd_signed);
++	sigCD.extend_u0(32, /*cd_signed*/ true);
+ endcode
+ 
+ code

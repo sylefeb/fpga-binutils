@@ -1,16 +1,7 @@
 diff --git a/Makefile b/Makefile
-index ced14cb4..207e0526 100644
+index e6a27de0..31f9c3b0 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -13,7 +13,7 @@ CONFIG := clang
- ENABLE_TCL := 1
- ENABLE_ABC := 1
- ENABLE_GLOB := 1
--ENABLE_PLUGINS := 1
-+ENABLE_PLUGINS := 0
- ENABLE_READLINE := 1
- ENABLE_EDITLINE := 0
- ENABLE_GHDL := 0
 @@ -122,8 +122,8 @@ export PATH := $(PORT_PREFIX)/bin:$(PATH)
  endif
  
@@ -21,7 +12,7 @@ index ced14cb4..207e0526 100644
 +# LDLIBS += -lrt
  endif
  
- YOSYS_VER := 0.9+3962
+ YOSYS_VER := 0.9+4008
 @@ -139,7 +139,7 @@ bumpversion:
  # is just a symlink to your actual ABC working directory, as 'make mrproper'
  # will remove the 'abc' directory and you do not want to accidentally
