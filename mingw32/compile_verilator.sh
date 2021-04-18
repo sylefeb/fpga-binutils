@@ -9,7 +9,7 @@ cd BUILDS
 
 git clone https://git.veripool.org/git/verilator
 cd verilator
-git checkout 1b94e3b0e28df16122f24d2676404eec41175878
+# git checkout 1b94e3b0e28df16122f24d2676404eec41175878
 cp /usr/include/FlexLexer.h src/
 unset VERILATOR_ROOT
 autoconf        # Create ./configure script

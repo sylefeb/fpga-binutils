@@ -11,7 +11,7 @@ cd BUILDS
 
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
-git checkout 26e01a67db4135196b1d25ed89e9e6ceb536f4e3
+git checkout dce037a62c5bda9a8256d271d39b06be366120e8
 git apply ../../../patches/yosys_patch.diff
 git apply ../../../patches/yosys_patch_ice40_dsp.diff
 git clone https://github.com/YosysHQ/abc
