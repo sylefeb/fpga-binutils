@@ -2,7 +2,7 @@
 
 # riscv toolchain
 
-pacman -S --noconfirm --needed git ${MINGW_PACKAGE_PREFIX}-gcc-libs gawk ${MINGW_PACKAGE_PREFIX}-gcc ${MINGW_PACKAGE_PREFIX}-make ${MINGW_PACKAGE_PREFIX}-pkg-config  texinfo bison flex diffutils 
+pacman -S --noconfirm --needed git ${MINGW_PACKAGE_PREFIX}-gcc-libs gawk ${MINGW_PACKAGE_PREFIX}-gcc ${MINGW_PACKAGE_PREFIX}-make ${MINGW_PACKAGE_PREFIX}-pkg-config make texinfo bison flex diffutils 
 
 mkdir BUILDS
 cd BUILDS
