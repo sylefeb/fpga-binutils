@@ -72,7 +72,7 @@ cp /mingw64/bin/libreadline*.dll ./bin/
 cp /mingw64/bin/libstdc++-*.dll ./bin/
 cp /mingw64/bin/libtermcap-*.dll ./bin/
 cp /mingw64/bin/libthai-*.dll ./bin/
-cp /mingw64/bin/libusb-*.dll ./bin/
+# cp /mingw64/bin/libusb-*.dll ./bin/ # it seems latest MinGW libusb has an issue, including the latest working in package (MD5 8cdefad270d5d2c4f910fffb7524f2ab)
 cp /mingw64/bin/libwinpthread-*.dll ./bin/
 cp /mingw64/bin/libxml2-*.dll ./bin/
 cp /mingw64/bin/libzstd.dll ./bin/
