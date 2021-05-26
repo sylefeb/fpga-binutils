@@ -25,6 +25,7 @@ rm -rf build
 mkdir build
 cd build
 cmake .. -G "MinGW Makefiles" -DARCH="ice40;ecp5;gowin" -DICEBOX_DATADIR=$DIR/BUILDS/icebox-data/ -DTRELLIS_INSTALL_PREFIX=$DIR -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
+mingw32-make install
 cd ..
 cd ..
 
