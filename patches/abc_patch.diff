@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index ee4172f5..d1b64b3e 100644
+index ee4172f5..272421c5 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -56,7 +56,7 @@ ARCHFLAGS := $(ARCHFLAGS)
@@ -11,7 +11,12 @@ index ee4172f5..d1b64b3e 100644
  ifneq ($(findstring arm,$(shell uname -m)),)
  	CFLAGS += -DABC_MEMALIGN=4
  endif
-@@ -142,7 +142,7 @@ ifneq ($(OS), FreeBSD)
+@@ -138,11 +138,11 @@ endif
+ # LIBS := -ldl -lrt
+ LIBS += -lm
+ ifneq ($(OS), FreeBSD)
+-  LIBS += -ldl
++#  LIBS += -ldl
  endif
  
  ifneq ($(findstring Darwin, $(shell uname)), Darwin)

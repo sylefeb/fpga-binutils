@@ -2,7 +2,7 @@
 
 mkdir bin
 
-pacman -S --noconfirm --needed git gcc g++ make cmake automake
+pacman -S --noconfirm --needed git gcc g++ make cmake automake bison flex
 
 # ../mingw32/compile_fujprog.sh # fujprog only compiles as 32 bits ...
 
