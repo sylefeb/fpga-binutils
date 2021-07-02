@@ -1,16 +1,18 @@
 diff --git a/Makefile b/Makefile
-index 07ebed64..180cb7cc 100644
+index cce05939..c33f74ff 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -13,7 +13,7 @@ CONFIG := clang
+@@ -13,8 +13,8 @@ CONFIG := clang
  ENABLE_TCL := 1
  ENABLE_ABC := 1
  ENABLE_GLOB := 1
 -ENABLE_PLUGINS := 1
+-ENABLE_READLINE := 1
 +ENABLE_PLUGINS := 0
- ENABLE_READLINE := 1
++ENABLE_READLINE := 0
  ENABLE_EDITLINE := 0
  ENABLE_GHDL := 0
+ ENABLE_VERIFIC := 0
 @@ -122,8 +122,8 @@ export PATH := $(PORT_PREFIX)/bin:$(PATH)
  endif
  
