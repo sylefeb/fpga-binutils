@@ -31,7 +31,7 @@ cp yosys-config ../../bin/
 cp yosys-filterlib ../../bin/
 cp yosys-smtbmc.exe ../../bin/
 cp yosys-smtbmc-script.py ../../bin/
-cp -R share ../../
+cp -R share ../../bin/
 cd ..
 
 cd ..
