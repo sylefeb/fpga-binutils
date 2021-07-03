@@ -10,6 +10,8 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake bison flex
 ../mingw32/compile_openFPGALoader.sh
 
 ../mingw32/compile_yosys.sh
+../mingw32/compile_symbiyosys.sh
+../mingw32/compile_yices2-smt2.sh
 ../mingw32/compile_icestorm.sh
 ../mingw32/compile_trellis.sh
 ../mingw32/compile_nextpnr.sh
