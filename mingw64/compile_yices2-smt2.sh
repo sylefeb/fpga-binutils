@@ -27,7 +27,7 @@ dos2unix ./utils/yices_parser.txt
 autoconf
 ./configure --host=x86_64-pc-mingw64
 echo 'echo "cygwin"' > autoconf/os
-MAKE=/usr/bin/make OPTION=mingw64 /usr/bin/make -j$J static-bin
+MAKE=/usr/bin/make OPTION=mingw64 /usr/bin/make -j16 static-bin
 
 BINDIR=./build/x86_64-pc-mingw64-release/static_bin
 
