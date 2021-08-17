@@ -25,7 +25,7 @@ rm -rf build
 mkdir build
 cd build
 cmake .. -G "MinGW Makefiles" -DARCH="xilinx" -DXRAY_DIR=$DIR/BUILDS/prjxray/ -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
-mingw32-make install
+mingw32-make -j16 install
 cd ..
 cd ..
 
