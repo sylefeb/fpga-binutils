@@ -5,7 +5,7 @@ mkdir bin
 pacman -S --noconfirm --needed git gcc g++ make cmake automake bison flex
 
 # ./compile_fujprog.sh
-# ./compile_dfu-util.sh
+./compile_dfu-util.sh
 # ./compile_openFPGALoader.sh
 
 ./compile_yosys.sh
