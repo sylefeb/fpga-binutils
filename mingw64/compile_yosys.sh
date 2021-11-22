@@ -16,7 +16,7 @@ git apply ../../../patches/yosys_patch.diff
 git apply ../../../patches/yosys_patch_ice40_dsp.diff
 git clone https://github.com/YosysHQ/abc
 cd abc
-git checkout 4f5f73d18b137930fb3048c0b385c82fa078db38
+git checkout f6fa2dd
 git apply ../../../../patches/abc_patch.diff
 cd ..
 mingw32-make PREFIX=$DIR config-msys2-64

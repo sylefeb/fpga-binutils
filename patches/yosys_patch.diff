@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index cce05939..c33f74ff 100644
+index 42364ed45..89229ce45 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -13,8 +13,8 @@ CONFIG := clang
@@ -13,7 +13,7 @@ index cce05939..c33f74ff 100644
  ENABLE_EDITLINE := 0
  ENABLE_GHDL := 0
  ENABLE_VERIFIC := 0
-@@ -122,8 +122,8 @@ export PATH := $(PORT_PREFIX)/bin:$(PATH)
+@@ -125,8 +125,8 @@ export PATH := $(PORT_PREFIX)/bin:$(PATH)
  endif
  
  else
@@ -23,13 +23,13 @@ index cce05939..c33f74ff 100644
 +# LDLIBS += -lrt
  endif
  
- YOSYS_VER := 0.9+4081
-@@ -139,7 +139,7 @@ bumpversion:
+ YOSYS_VER := 0.11+47
+@@ -142,7 +142,7 @@ bumpversion:
  # is just a symlink to your actual ABC working directory, as 'make mrproper'
  # will remove the 'abc' directory and you do not want to accidentally
  # delete your work on ABC..
--ABCREV = 4f5f73d
+-ABCREV = f6fa2dd
 +ABCREV = default
  ABCPULL = 1
  ABCURL ?= https://github.com/YosysHQ/abc
- ABCMKARGS = CC="$(CXX)" CXX="$(CXX)" ABC_USE_LIBSTDCXX=1
+ ABCMKARGS = CC="$(CXX)" CXX="$(CXX)" ABC_USE_LIBSTDCXX=1 VERBOSE=$(Q)
