@@ -11,14 +11,14 @@ cd BUILDS
 
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
-git checkout 862e84eb3d85dfaacc7025b33c7dbe038bfff2d5
-git apply ../../../patches/yosys_patch.diff
+git checkout c785cb7fe35da70fe833441c70d0186ed3a892fe
+# git apply ../../../patches/yosys_patch.diff
 git apply ../../../patches/yosys_patch_ice40_dsp.diff
-git clone https://github.com/YosysHQ/abc
-cd abc
-git checkout f6fa2dd
-git apply ../../../../patches/abc_patch.diff
-cd ..
+# git clone https://github.com/YosysHQ/abc
+# cd abc
+# git checkout 3da9357
+# git apply ../../../../patches/abc_patch.diff
+# cd ..
 mingw32-make PREFIX=$DIR config-msys2-64
 mingw32-make PREFIX=$DIR -j16 PYTHON="C:/msys64/mingw64/bin/python3"
 strip -S yosys.exe

@@ -14,7 +14,7 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake bison flex
 # ./compile_icestorm.sh
 # ./compile_trellis.sh
 ./compile_nextpnr-gowin.sh
-./compile_nextpnr-xilinx.sh
+# ./compile_nextpnr-xilinx.sh
 
 # ./compile_iverilog.sh
 # ./compile_verilator.sh
