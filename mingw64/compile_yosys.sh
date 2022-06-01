@@ -2,7 +2,19 @@
 
 # yosys
 
-pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc-libs ${MINGW_PACKAGE_PREFIX}-readline 		 ${MINGW_PACKAGE_PREFIX}-libffi ${MINGW_PACKAGE_PREFIX}-tcl git bison flex ${MINGW_PACKAGE_PREFIX}-python3 ${MINGW_PACKAGE_PREFIX}-tcl ${MINGW_PACKAGE_PREFIX}-gcc ${MINGW_PACKAGE_PREFIX}-make ${MINGW_PACKAGE_PREFIX}-pkg-config ${MINGW_PACKAGE_PREFIX}-dlfcn
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc-libs 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-readline 		 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-libffi 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-tcl 
+pacman -S --noconfirm --needed git 
+pacman -S --noconfirm --needed bison 
+pacman -S --noconfirm --needed flex 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python3 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-tcl 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-make 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-dlfcn
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-pkg-config 
 
 DIR=$(pwd)
 

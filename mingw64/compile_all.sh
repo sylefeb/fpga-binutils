@@ -8,13 +8,15 @@ pacman -S --noconfirm --needed git gcc g++ make cmake automake bison flex
 ./compile_dfu-util.sh
 # ./compile_openFPGALoader.sh
 
-./compile_yosys.sh
-./compile_symbiyosys.sh
-./compile_yices2-smt2.sh
 ./compile_icestorm.sh
 ./compile_trellis.sh
 ./compile_nextpnr.sh
-./compile_nextpnr-gowin.sh
+
+./compile_yosys.sh
+./compile_symbiyosys.sh
+./compile_yices2-smt2.sh
+
+# ./compile_nextpnr-gowin.sh
 # ./compile_nextpnr-xilinx.sh
 
 # ./compile_iverilog.sh
