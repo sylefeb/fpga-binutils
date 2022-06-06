@@ -13,7 +13,17 @@ cd $(dirname $CC1)
 "$EDBIN" //LARGEADDRESSAWARE cc1plus.exe
 popd
 
-pacman -S --noconfirm --needed git ${MINGW_PACKAGE_PREFIX}-eigen3 ${MINGW_PACKAGE_PREFIX}-python3 ${MINGW_PACKAGE_PREFIX}-gcc-libs ${MINGW_PACKAGE_PREFIX}-qt5 git gawk ${MINGW_PACKAGE_PREFIX}-gcc ${MINGW_PACKAGE_PREFIX}-make ${MINGW_PACKAGE_PREFIX}-pkg-config ${MINGW_PACKAGE_PREFIX}-boost ${MINGW_PACKAGE_PREFIX}-cmake
+pacman -S --noconfirm --needed git ${MINGW_PACKAGE_PREFIX}-eigen3
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python3
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc-libs
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-qt5
+pacman -S --noconfirm --needed git
+pacman -S --noconfirm --needed gawk
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-make
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-pkg-config
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-boost
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-cmake
 
 mkdir BUILDS
 cd BUILDS
@@ -23,7 +33,7 @@ cd prjtrellis
 
 cd libtrellis
 
-cmake . -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=$DIR
+cmake . -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX=$DIR -DBoost_INCLUDE_DIR=/mingw64/include
 
 mingw32-make install
 

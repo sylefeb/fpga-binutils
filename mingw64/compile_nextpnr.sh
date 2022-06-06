@@ -13,7 +13,7 @@ cd $(dirname $PY3)
 popd
 
 pacman -S --noconfirm --needed git
-pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-eigen3 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-eigen3
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python3
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc-libs
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-qt5
@@ -26,7 +26,7 @@ pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-cmake
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pip
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-numpy
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pandas
-pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pillow 
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pillow
 
 pip install apycula
 
@@ -38,8 +38,8 @@ cd nextpnr
 rm -rf build
 mkdir build
 cd build
-cmake .. -G "MSYS Makefiles" -DARCH="ice40;ecp5" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DICEBOX_DATADIR=$DIR/BUILDS/icebox-data/ -DTRELLIS_INSTALL_PREFIX=$DIR -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
-mingw32-make install
+cmake .. -G "MSYS Makefiles" -DARCH="ice40;ecp5" -DBoost_INCLUDE_DIR=/mingw64/include -DICEBOX_DATADIR=$DIR/BUILDS/icebox-data/ -DTRELLIS_INSTALL_PREFIX=$DIR -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
+mingw32-make -j16 install
 cd ..
 cd ..
 

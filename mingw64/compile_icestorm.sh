@@ -20,7 +20,7 @@ cp ./iceprog/iceprog.exe ../../bin/
 cp ./icepll/icepll.exe ../../bin/
 cd ..
 
-mkdir icebox-data
+mkdir -p icebox-data
 cp icestorm/icebox/*.txt icebox-data/
 cp icestorm/icefuzz/*.txt icebox-data/
 
