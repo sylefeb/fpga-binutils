@@ -1,6 +1,8 @@
 #!/bin/bash
 
 pacman -S --noconfirm --needed dos2unix
+pacman -S --noconfirm --needed autoconf automake
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gperf
 
 # see also https://github.com/YosysHQ/fpga-toolchain/blob/main/scripts/compile_yices2.sh
 
