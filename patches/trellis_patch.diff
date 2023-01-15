@@ -1,0 +1,31 @@
+diff --git a/libtrellis/include/DatabasePath.hpp b/libtrellis/include/DatabasePath.hpp
+index 8134323..915368a 100644
+--- a/libtrellis/include/DatabasePath.hpp
++++ b/libtrellis/include/DatabasePath.hpp
+@@ -4,6 +4,8 @@
+ #include <boost/version.hpp>
+ #include <boost/filesystem.hpp>
+ 
++#define STRING(X) #X
++
+ #if BOOST_VERSION >= 106100
+ 
+ #if defined(__wasm)
+@@ -20,7 +22,7 @@ std::string get_database_path()
+ std::string get_database_path()
+ {
+     boost::filesystem::path executable_path = boost::dll::program_location().parent_path();
+-    boost::filesystem::path database_datadir_relative(TRELLIS_RPATH_DATADIR "/" TRELLIS_PROGRAM_PREFIX "trellis/database");
++    boost::filesystem::path database_datadir_relative(STRING(TRELLIS_RPATH_DATADIR) "/" TRELLIS_PROGRAM_PREFIX "trellis/database");
+     std::string database_folder = (executable_path /= database_datadir_relative).string();
+     return database_folder;
+ }
+@@ -159,7 +161,7 @@ std::string proc_self_dirname()
+ std::string get_database_path()
+ {
+     boost::filesystem::path executable_path = boost::filesystem::path(proc_self_dirname()).parent_path();
+-    boost::filesystem::path database_datadir_relative(TRELLIS_RPATH_DATADIR "/trellis/database");
++    boost::filesystem::path database_datadir_relative(STRING(TRELLIS_RPATH_DATADIR) "/trellis/database");
+     std::string database_folder = (executable_path /= database_datadir_relative).string();
+     return database_folder;
+ }
