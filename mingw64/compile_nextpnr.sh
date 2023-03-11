@@ -27,6 +27,8 @@ pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pip
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-numpy
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pandas
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pillow
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-icestorm
+pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-prjtrellis
 
 pip install apycula
 
@@ -35,10 +37,16 @@ cd BUILDS
 
 git clone https://github.com/YosysHQ/nextpnr.git
 cd nextpnr
+# build chipdb
+# cd ice40
+# cmake . -G "MinGW Makefiles" -DICESTORM_INSTALL_PREFIX=${MINGW_PREFIX}
+# mingw32-make
+# cd ..
+# build nextpnr
 rm -rf build
 mkdir build
 cd build
-cmake .. -G "MSYS Makefiles" -DARCH="ice40;ecp5" -DBoost_INCLUDE_DIR=/mingw64/include -DICEBOX_DATADIR=$DIR/BUILDS/icebox-data/ -DTRELLIS_INSTALL_PREFIX=$DIR -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
+cmake .. -G "MSYS Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=/mingw64/share/icebox/ -DICESTORM_INSTALL_PREFIX=${MINGW_PREFIX} -DTRELLIS_INSTALL_PREFIX=/mingw64/share/trellis/ -DBoost_INCLUDE_DIR=/mingw64/include -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
 mingw32-make -j16 install
 cd ..
 cd ..
