@@ -37,6 +37,7 @@ cd BUILDS
 
 git clone https://github.com/YosysHQ/nextpnr.git
 cd nextpnr
+git checkout 90b0e90bbe2fb923154096a8be3660b5e3f4cbb0 ## This is due to a change in prjtrellis
 # build chipdb
 # cd ice40
 # cmake . -G "MinGW Makefiles" -DICESTORM_INSTALL_PREFIX=${MINGW_PREFIX}
@@ -46,7 +47,7 @@ cd nextpnr
 rm -rf build
 mkdir build
 cd build
-cmake .. -G "MSYS Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=/mingw64/share/icebox/ -DICESTORM_INSTALL_PREFIX=${MINGW_PREFIX} -DTRELLIS_INSTALL_PREFIX=/mingw64/share/trellis/ -DBoost_INCLUDE_DIR=/mingw64/include -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
+cmake .. -G "MSYS Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=/mingw64/share/icebox/ -DICESTORM_INSTALL_PREFIX=${MINGW_PREFIX} -DTRELLIS_INSTALL_PREFIX=${MINGW_PREFIX} -DBoost_INCLUDE_DIR=/mingw64/include -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
 mingw32-make -j16 install
 cd ..
 cd ..
