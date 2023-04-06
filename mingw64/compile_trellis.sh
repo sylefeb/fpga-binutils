@@ -21,7 +21,7 @@ pacman -S --noconfirm --needed git
 pacman -S --noconfirm --needed gawk
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-make
-pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-pkg-config
+# pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-pkg-config
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-boost
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-cmake
 
@@ -34,7 +34,7 @@ git apply ../../../patches/trellis_patch.diff
 
 cd libtrellis
 
-cmake . -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX=$DIR -DBoost_INCLUDE_DIR=/mingw64/include
+cmake . -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=$DIR -DBoost_INCLUDE_DIR=/mingw64/include
 
 mingw32-make install
 
