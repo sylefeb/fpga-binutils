@@ -13,6 +13,8 @@ cd $(dirname $CC1)
 "$EDBIN" //LARGEADDRESSAWARE cc1plus.exe
 popd
 
+pacman -R --noconfirm ${MINGW_PACKAGE_PREFIX}-prjtrellis
+
 pacman -S --noconfirm --needed git ${MINGW_PACKAGE_PREFIX}-eigen3
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python3
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-gcc-libs

@@ -29,8 +29,6 @@ pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pip
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-numpy
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pandas
 pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-python-pillow
-pacman -S --noconfirm --needed ${MINGW_PACKAGE_PREFIX}-icestorm
-pacman -R --noconfirm ${MINGW_PACKAGE_PREFIX}-prjtrellis
 
 pip install apycula
 
@@ -47,7 +45,7 @@ export PYTHONPATH=$PYTHONPATH:$DIR/BUILDS/prjtrellis/libtrellis/:$DIR/BUILDS/prj
 rm -rf build
 mkdir build
 cd build
-cmake .. -G "MinGW Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=/mingw64/share/icebox/ -DICESTORM_INSTALL_PREFIX=${MINGW_PREFIX} -DTRELLIS_LIBDIR=$DIR/lib -DTRELLIS_INSTALL_PREFIX=$DIR -DBoost_INCLUDE_DIR=/mingw64/include -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
+cmake .. -G "MinGW Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=$DIR/icebox/ -DICESTORM_INSTALL_PREFIX=$DIR -DTRELLIS_LIBDIR=$DIR/lib -DTRELLIS_INSTALL_PREFIX=$DIR -DBoost_INCLUDE_DIR=/mingw64/include -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
 mingw32-make -j16 install
 cd ..
 cd ..
