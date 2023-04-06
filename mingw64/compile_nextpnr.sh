@@ -4,7 +4,7 @@
 
 DIR=$(pwd)
 
-echo "DIR is $DIRW"
+echo "DIR is $DIR"
 
 echo "first we patch python3 for large addresses ... well, yes ... (editbin has to be in path)"
 EDBIN=$(find /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/ -name editbin.exe -print -quit)
@@ -45,7 +45,7 @@ export PYTHONPATH=$PYTHONPATH:$DIR/BUILDS/prjtrellis/libtrellis/:$DIR/BUILDS/prj
 rm -rf build
 mkdir build
 cd build
-cmake .. -G "MinGW Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=$DIR/icebox/ -DICESTORM_INSTALL_PREFIX=$DIR -DTRELLIS_LIBDIR=$DIR/lib -DTRELLIS_INSTALL_PREFIX=$DIR -DBoost_INCLUDE_DIR=/mingw64/include -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
+cmake .. -G "MinGW Makefiles" -DARCH="ice40;ecp5" -DICEBOX_DATADIR=$DIR/BUILDS/icebox/ -DICESTORM_INSTALL_PREFIX=$DIR -DTRELLIS_LIBDIR=$DIR/lib -DTRELLIS_INSTALL_PREFIX=$DIR -DBoost_INCLUDE_DIR=/mingw64/include -DBUILD_HEAP=ON -DUSE_OPENMP=ON -DBUILD_PYTHON=OFF -DBUILD_GUI=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DIR -DUSE_IPO=OFF
 mingw32-make -j16 install
 cd ..
 cd ..
