@@ -30,7 +30,7 @@ cd BUILDS
 
 git clone --recursive https://github.com/YosysHQ/prjtrellis
 cd prjtrellis
-git apply ../../../patches/trellis_patch.diff
+# git apply ../../../patches/trellis_patch.diff
 
 cd libtrellis
 
